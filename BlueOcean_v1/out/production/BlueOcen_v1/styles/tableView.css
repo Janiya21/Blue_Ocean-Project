@@ -1,0 +1,26 @@
+.root{
+
+    -fx-background-color: rgba(153,51,255,0.3);
+}
+
+.table-view {
+    -fx-background-color: #ffe6f7;
+}
+
+
+.table-row-cell {
+    -fx-background-color: #666699;
+    -fx-font-weight:bold;
+    -fx-text-fill: whitesmoke;
+}
+
+
+.table-row-cell{
+
+    -fx-text-fill: whitesmoke;
+}
+
+.table-column {
+
+     -fx-text-fill: whitesmoke;
+}

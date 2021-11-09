@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane fx:id="mealRoot" prefHeight="616.0" prefWidth="1236.0" style="-fx-background-color: linear-gradient(to left,#b3d9ff,#ffcce0);" stylesheets="@../styles/Reception_foodPackagesStyles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Reception_MealPackageController">
+   <children>
+      <HBox layoutX="31.0" layoutY="42.0" prefHeight="530.0" prefWidth="1000.0">
+         <children>
+            <ScrollPane hbarPolicy="ALWAYS" prefHeight="562.0" prefWidth="1025.0">
+               <content>
+                  <SplitPane dividerPositions="0.3929098966026588, 0.6838995568685377" orientation="VERTICAL" prefHeight="679.0" prefWidth="1025.0">
+                    <items>
+                        <Pane>
+                           <children>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="244.0" prefWidth="1025.0">
+                                 <children>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="70.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/pasta.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="346.0" layoutY="124.0" prefHeight="21.0" prefWidth="147.0" text=" Chease Pasta" />
+                                    <FontAwesomeIconView glyphName="PLUS_SQUARE" layoutX="315.0" layoutY="141.0" size="18.0" />
+                                    <Separator layoutX="492.0" layoutY="42.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="17.0" />
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="530.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/lasagna.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <FontAwesomeIconView glyphName="PLUS_SQUARE" layoutX="761.0" layoutY="140.0" size="18.0" />
+                                    <Label layoutX="801.0" layoutY="123.0" prefHeight="21.0" prefWidth="147.0" text="Lasagna" />
+                                    <Label layoutX="346.0" layoutY="171.0" prefHeight="21.0" prefWidth="101.0" text="Morning tea" />
+                                    <Label layoutX="801.0" layoutY="171.0" prefHeight="21.0" prefWidth="101.0" text="Morning tea" />
+                                    <JFXButton layoutY="-1.0" prefHeight="63.0" prefWidth="500.0" style="-fx-background-color: #c6c6ec;" text=" ">
+                                       <graphic>
+                                          <RadioButton fx:id="radMealPlan02" mnemonicParsing="false" selected="true" text="Meal Plan 02 ( French Set Menu)">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="mealPlan" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                       </graphic>
+                                    </JFXButton>
+                                    <JFXButton layoutX="500.0" prefHeight="62.0" prefWidth="525.0" style="-fx-background-color: #ffccff;" text=" ">
+                                       <graphic>
+                                          <RadioButton fx:id="radMealPlan01" mnemonicParsing="false" prefHeight="27.0" prefWidth="252.0" text="Meal Plan 01 (Chinese Set Menu)" toggleGroup="$mealPlan" />
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </Pane>
+                        <Pane>
+                           <children>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="210.0" prefWidth="1023.0">
+                                 <children>
+                                    <ImageView fitHeight="122.0" fitWidth="200.0" layoutX="78.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/sea.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <FontAwesomeIconView glyphName="PLUS_SQUARE" layoutX="319.0" layoutY="78.0" size="18.0" />
+                                    <Label layoutX="350.0" layoutY="61.0" prefHeight="21.0" prefWidth="147.0" text="Sea Food" />
+                                    <Separator layoutX="494.0" layoutY="12.0" orientation="VERTICAL" prefHeight="200.0" />
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="537.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/fe.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <FontAwesomeIconView glyphName="PLUS_SQUARE" layoutX="765.0" layoutY="80.0" size="18.0" />
+                                    <Label layoutX="793.0" layoutY="63.0" prefHeight="21.0" prefWidth="147.0" text="Chinese Rice" />
+                                    <Label layoutX="350.0" layoutY="112.0" prefHeight="21.0" prefWidth="101.0" text="Deserts" />
+                                    <Label layoutX="793.0" layoutY="112.0" prefHeight="21.0" prefWidth="101.0" text="Deserts" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </Pane>
+                        <Pane>
+                           <children>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="291.0" prefWidth="1023.0">
+                                 <children>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="74.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/chs.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <FontAwesomeIconView glyphName="PLUS_SQUARE" layoutX="312.0" layoutY="71.0" size="18.0" />
+                                    <Label layoutX="341.0" layoutY="54.0" prefHeight="21.0" prefWidth="147.0" text="Chease Bread" />
+                                    <Separator layoutX="494.0" layoutY="5.0" orientation="VERTICAL" prefHeight="200.0" />
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="537.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="537.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../assets/pizz.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <FontAwesomeIconView glyphName="PLUS_SQUARE" layoutX="762.0" layoutY="72.0" size="18.0" />
+                                    <Label layoutX="789.0" layoutY="55.0" prefHeight="21.0" prefWidth="147.0" text="Pizza" />
+                                    <Label layoutX="341.0" layoutY="105.0" prefHeight="21.0" prefWidth="101.0" text="Deserts" />
+                                    <Label layoutX="789.0" layoutY="105.0" prefHeight="21.0" prefWidth="101.0" text="Deserts" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </Pane>
+                    </items>
+                  </SplitPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+      <JFXButton layoutX="1045.0" layoutY="442.0" onAction="#GoFromMeal" prefHeight="49.0" prefWidth="168.0" styleClass="btn" text="Next">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton layoutX="1044.0" layoutY="522.0" onAction="#BackFromMeal" prefHeight="49.0" prefWidth="168.0" styleClass="btn2" text="Back">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <FontAwesomeIconView fill="#523a94" glyphName="DASHBOARD" layoutX="1108.0" layoutY="85.0" size="50" wrappingWidth="41.0" />
+      <FontAwesomeIconView fill="#6c3486" glyphName="CART_PLUS" layoutX="1103.0" layoutY="212.0" size="50" wrappingWidth="41.0" />
+      <Label layoutX="1085.0" layoutY="114.0" text="Special evevnts" />
+      <FontAwesomeIconView fill="#54266b" glyphName="BIRTHDAY_CAKE" layoutX="1103.0" layoutY="337.0" size="50" />
+      <Label layoutX="1058.0" layoutY="367.0" text="Birthday celebrations" />
+      <Label layoutX="1093.0" layoutY="231.0" text="Food Carts" />
+   </children>
+</AnchorPane>

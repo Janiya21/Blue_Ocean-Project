@@ -1,0 +1,22 @@
+
+.round.box {
+    -fx-background-radius : 100%;
+    -fx-border-radius : 100%;
+    -fx-border-width : 5px;
+}
+
+.btn2{
+    -fx-background-color:transparent;
+    -fx-border-color:#312d2d;
+    -fx-border-width:2;
+    -fx-border-radius:25px;
+    -fx-background-radius:25px;
+}
+
+.btn{
+    -fx-background-color:#003366;
+    -fx-border-width:2;
+    -fx-border-radius:25px;
+    -fx-background-radius:25px;
+    -fx-text-fill:#ffffff;
+}

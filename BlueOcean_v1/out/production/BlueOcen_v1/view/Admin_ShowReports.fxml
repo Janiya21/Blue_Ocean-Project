@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="reportRoot" prefHeight="616.0" prefWidth="1236.0" style="-fx-background-color: linear-gradient(to left,#d699ff,#ffd9b3);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Admin_ShowReportsController">
+   <children>
+      <TabPane prefHeight="616.0" prefWidth="1236.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Monthly income report">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="monthlyIncomeTable" layoutX="36.0" layoutY="31.0" prefHeight="438.0" prefWidth="589.0">
+                          <columns>
+                            <TableColumn fx:id="week1" prefWidth="142.99996948242188" text="1 st Week" />
+                            <TableColumn fx:id="week2" prefWidth="132.0" text="2 nd Week" />
+                              <TableColumn fx:id="week3" prefWidth="147.0" text="3 rd Week" />
+                              <TableColumn fx:id="week4" prefWidth="167.0" text="4 th Week" />
+                          </columns>
+                        </TableView>
+                        <LineChart fx:id="lineChart" layoutX="647.0" layoutY="24.0" prefHeight="443.0" prefWidth="569.0" title="Monthly Income Chart">
+                          <xAxis>
+                            <CategoryAxis prefHeight="17.0" prefWidth="508.0" side="BOTTOM" fx:id="x" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="y" side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                        <JFXTextField editable="false" layoutX="36.0" layoutY="501.0" prefHeight="31.0" prefWidth="594.0" promptText="This Month Total Income : " />
+                        <JFXButton layoutX="725.0" layoutY="493.0" onAction="#goBackBtn" prefHeight="48.0" prefWidth="207.0" styleClass="btn2" text="Back">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></JFXButton>
+                        <JFXButton layoutX="987.0" layoutY="492.0" onAction="#btnDone" prefHeight="49.0" prefWidth="201.0" styleClass="btn" text="Done">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></JFXButton>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Annualy income report">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane layoutX="29.0" layoutY="28.0" prefHeight="449.0" prefWidth="600.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="445.0" prefWidth="1191.0">
+                                 <children>
+                                    <TableView fx:id="AnnualReoportTable" layoutX="15.0" layoutY="12.0">
+                                      <columns>
+                                        <TableColumn fx:id="jan" prefWidth="86.0" text="Jan" />
+                                        <TableColumn fx:id="feb" prefWidth="105.0" text="Feb" />
+                                          <TableColumn fx:id="mar" prefWidth="112.0" text="Mar" />
+                                          <TableColumn fx:id="april" prefWidth="118.0" text="Apr" />
+                                          <TableColumn fx:id="may" prefWidth="111.0" text="May" />
+                                          <TableColumn fx:id="june" prefWidth="120.0" text="June" />
+                                          <TableColumn fx:id="aug" prefWidth="110.0" text="Aug" />
+                                          <TableColumn fx:id="sep" prefWidth="105.0" text="Sept" />
+                                          <TableColumn fx:id="oct" prefWidth="106.0" text="Oct" />
+                                          <TableColumn fx:id="nov" prefWidth="110.0" text="Nov" />
+                                          <TableColumn fx:id="dec" prefWidth="85.0" text="Dec" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                        <LineChart fx:id="AnnualLineChart" layoutX="647.0" layoutY="20.0" prefHeight="469.0" prefWidth="567.0" title="Annually Income Report">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                        <JFXTextField editable="false" layoutX="28.0" layoutY="499.0" prefHeight="31.0" prefWidth="602.0" promptText="This Year Total Income : " />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+   <stylesheets>
+      <URL value="@../styles/Reception_Loginstyles.css" />
+      <URL value="@../styles/tableView.css" />
+   </stylesheets>
+</AnchorPane>

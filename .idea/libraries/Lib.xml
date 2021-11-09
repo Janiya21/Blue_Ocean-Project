@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/BlueOcean_v1/Lib/fontawesomefx-icons525-3.0.0-4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/BlueOcean_v1/Lib/fontawesomefx-8.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/BlueOcean_v1/Lib/jfoenix.jar!/" />
+      <root url="jar://$PROJECT_DIR$/BlueOcean_v1/Lib/fontawesomefx-materialicons-2.2.0-5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="finishingRoot" prefHeight="616.0" prefWidth="1236.0" style="-fx-background-color: linear-gradient(to left,#d699ff,#ffd9b3);" stylesheets="@../styles/Admin_bedOperationStyles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FinalRootController">
+   <children>
+      <JFXButton fx:id="backToLoginBtn" layoutX="977.0" layoutY="421.0" onAction="#goBackToLogin" prefHeight="49.0" prefWidth="178.0" styleClass="btn" text="Back to Login">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="exitBtn" layoutX="977.0" layoutY="509.0" onAction="#exitWindow" prefHeight="49.0" prefWidth="178.0" styleClass="btnDelete" text="Exit">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <FontAwesomeIconView fill="#481f65" glyphName="CHECK_CIRCLE" layoutX="317.0" layoutY="303.0" size="150" />
+      <Label layoutX="554.0" layoutY="218.0" prefHeight="49.0" prefWidth="221.0" text="All Done !">
+         <font>
+            <Font name="System Bold" size="45.0" />
+         </font>
+      </Label>
+      <Hyperlink layoutX="384.0" layoutY="533.0" prefHeight="49.0" prefWidth="140.0" text="0758167339" underline="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </Hyperlink>
+      <Label layoutX="40.0" layoutY="547.0" prefHeight="21.0" prefWidth="341.0" text="Please use this number for contact System admins" />
+      <Hyperlink layoutX="501.0" layoutY="533.0" prefHeight="49.0" prefWidth="303.0" text="janithsandaru999@gmail.com" underline="true">
+         <font>
+            <Font size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Hyperlink>
+   </children>
+</AnchorPane>

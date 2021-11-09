@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="roomOperatorRoot" prefHeight="616.0" prefWidth="1236.0" style="-fx-background-color: linear-gradient(to left,#d699ff,#ffd9b3);;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Admin_RoomOperatorController">
+   <children>
+      <JFXTextField fx:id="roomNoTxt" layoutX="56.0" layoutY="38.0" prefHeight="31.0" prefWidth="572.0" promptText="room" />
+      <JFXTextField fx:id="bedTypeTxt" layoutX="56.0" layoutY="92.0" prefHeight="31.0" prefWidth="572.0" promptText="bed type" />
+      <TableView fx:id="AdminTableView" layoutX="57.0" layoutY="174.0" prefHeight="395.0" prefWidth="895.0">
+        <columns>
+          <TableColumn fx:id="roomNoCol" prefWidth="124.0" text="room No" />
+          <TableColumn fx:id="bedTypeCol" prefWidth="200.0" text="Beds" />
+            <TableColumn fx:id="facCol" prefWidth="278.0" text="Other facilities" />
+            <TableColumn fx:id="priceCol" prefWidth="160.0" text="Price" />
+            <TableColumn fx:id="availabilityCol" prefWidth="131.0" text="Availability" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="1000.0" layoutY="171.0" onAction="#adRoomBtn" prefHeight="47.0" prefWidth="201.0" styleClass="btnAddUpdate" text="Add Room">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="1000.0" layoutY="261.0" onAction="#updateRoomBtn" prefHeight="47.0" prefWidth="201.0" styleClass="btnAddUpdate" text="Update Room">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="1000.0" layoutY="348.0" onAction="#dltRoomBtn" prefHeight="47.0" prefWidth="201.0" styleClass="btnDelete" text="Delete Room">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="roomBack" layoutX="1000.0" layoutY="508.0" onAction="#goBackBtn" prefHeight="47.0" prefWidth="201.0" styleClass="btn2" text="back">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="1000.0" layoutY="426.0" onAction="#doneBtn" prefHeight="47.0" prefWidth="201.0" styleClass="btn" text="Next">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="priceTxt" layoutX="650.0" layoutY="92.0" prefHeight="31.0" prefWidth="558.0" promptText="price rs : " />
+      <JFXTextField fx:id="facilityTxt" layoutX="650.0" layoutY="38.0" prefHeight="31.0" prefWidth="558.0" promptText="facilities" />
+   </children>
+   <stylesheets>
+      <URL value="@../styles/Admin_bedOperationStyles.css" />
+      <URL value="@../styles/tableView.css" />
+   </stylesheets>
+</AnchorPane>

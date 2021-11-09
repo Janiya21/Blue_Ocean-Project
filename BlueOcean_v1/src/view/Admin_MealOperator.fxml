@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="mealChangeRoot" prefHeight="616.0" prefWidth="1236.0" style="-fx-background-color: linear-gradient(to left,#d699ff,#ffd9b3);" stylesheets="@../styles/Admin_bedOperationStyles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Admin_MealOperatorController">
+   <children>
+      <Label layoutX="63.0" layoutY="90.0" prefHeight="21.0" prefWidth="169.0" text="Add Meal Plan No " />
+      <Label layoutX="63.0" layoutY="252.0" prefHeight="21.0" prefWidth="110.0" text="Main Food" />
+      <Label layoutX="63.0" layoutY="340.0" prefHeight="21.0" prefWidth="110.0" text="Alter Includes" />
+      <Separator layoutX="851.0" layoutY="142.0" orientation="VERTICAL" prefHeight="438.0" prefWidth="13.0" />
+      <JFXTextField layoutX="212.0" layoutY="85.0" prefHeight="31.0" prefWidth="990.0" />
+      <JFXTextField layoutX="212.0" layoutY="247.0" prefHeight="31.0" prefWidth="574.0" />
+      <JFXTextField layoutX="212.0" layoutY="335.0" prefHeight="31.0" prefWidth="574.0" />
+      <Label layoutX="63.0" layoutY="438.0" prefHeight="21.0" prefWidth="130.0" text="Attach Photo" />
+      <JFXButton fx:id="backBtn" layoutX="943.0" layoutY="521.0" onAction="#goBackBtn" prefHeight="50.0" prefWidth="202.0" styleClass="btn2" text="Back">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="nextBtn" layoutX="943.0" layoutY="434.0" onAction="#goNextBtn" opacity="0.91" prefHeight="50.0" prefWidth="202.0" styleClass="btn" text="Next">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <FontAwesomeIconView glyphName="PLUS_SQUARE_ALT" layoutX="283.0" layoutY="469.0" size="60.0" text="" />
+      <Label layoutX="366.0" layoutY="438.0" prefHeight="21.0" prefWidth="130.0" text="Drag Photo here" />
+      <ComboBox fx:id="mealCombo" layoutX="212.0" layoutY="172.0" prefHeight="31.0" prefWidth="574.0" promptText="                     Morning Meal" style="-fx-background-color: #ffcccc;" />
+      <Label layoutX="63.0" layoutY="177.0" prefHeight="21.0" prefWidth="169.0" text="Meal Type" />
+      <JFXButton layoutX="943.0" layoutY="147.0" onAction="#addMealBtn" opacity="0.86" prefHeight="50.0" prefWidth="202.0" styleClass="btnAddUpdate" text="Add">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton layoutX="943.0" layoutY="238.0" onAction="#updateMealPlan" opacity="0.86" prefHeight="50.0" prefWidth="202.0" styleClass="btnAddUpdate" text="Update">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton layoutX="943.0" layoutY="336.0" onAction="#delMealPlan" opacity="0.96" prefHeight="50.0" prefWidth="202.0" styleClass="btnDelete" text="Delete">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+   </children>
+</AnchorPane>

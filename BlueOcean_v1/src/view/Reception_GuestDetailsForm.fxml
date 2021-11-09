@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="guestDetailsRoot" prefHeight="616.0" prefWidth="1236.0" style="-fx-background-color: linear-gradient(to left,#b3d9ff,#ffcce0);" stylesheets="@../styles/Reception_Loginstyles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Reception_GuestDetailsFormController">
+   <children>
+      <JFXTextField layoutX="177.0" layoutY="176.0" prefHeight="31.0" prefWidth="380.0" promptText="guest name" />
+      <JFXTextField layoutX="177.0" layoutY="339.0" prefHeight="31.0" prefWidth="380.0" promptText="telephone number" />
+      <JFXTextField layoutX="177.0" layoutY="251.0" prefHeight="31.0" prefWidth="380.0" promptText="guest id or driving license" />
+      <Label layoutX="91.0" layoutY="181.0" text="Name" />
+      <Label layoutX="89.0" layoutY="344.0" text="Tp no" />
+      <Label layoutX="91.0" layoutY="256.0" text="Id no" />
+      <Separator layoutX="615.0" layoutY="33.0" orientation="VERTICAL" prefHeight="561.0" prefWidth="0.0" />
+      <Label layoutX="89.0" layoutY="425.0" text="Address" />
+      <FontAwesomeIconView glyphName="CC_VISA" layoutX="790.0" layoutY="200.0" size="90" />
+      <FontAwesomeIconView glyphName="CC_MASTERCARD" layoutX="790.0" layoutY="331.0" size="90" wrappingWidth="91.14286041259766" />
+      <FontAwesomeIconView glyphName="CC_PAYPAL" layoutX="1040.0" layoutY="200.0" size="90" />
+      <JFXRadioButton fx:id="visaRadio" layoutX="709.0" layoutY="155.0" selected="true" text=" ">
+         <toggleGroup>
+            <ToggleGroup fx:id="payMethod" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="masterRadio" layoutX="709.0" layoutY="286.0" text=" " toggleGroup="$payMethod" />
+      <JFXRadioButton fx:id="paypalRadio" layoutX="994.0" layoutY="156.0" text=" " toggleGroup="$payMethod" />
+      <JFXTextField editable="false" layoutX="89.0" layoutY="70.0" prefHeight="31.0" prefWidth="470.0" promptText="Total Value : rs ">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="972.0" layoutY="468.0" onAction="#GoFromGuest" prefHeight="48.0" prefWidth="184.0" styleClass="btn" text="Done">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton layoutX="709.0" layoutY="468.0" onAction="#BackFromGuest" prefHeight="48.0" prefWidth="184.0" styleClass="btn2" text="Back">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXTextField layoutX="177.0" layoutY="420.0" prefHeight="31.0" prefWidth="380.0" promptText="telephone number" text="home address" />
+      <Label layoutX="91.0" layoutY="495.0" text="Email " />
+      <JFXTextField layoutX="177.0" layoutY="490.0" prefHeight="31.0" prefWidth="380.0" promptText="telephone number" text="joe@gmail.com" />
+      <Label layoutX="720.0" layoutY="70.0" prefHeight="21.0" prefWidth="422.0" text="Step 1 : Please Insert a Payment Method">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView glyphName="MONEY" layoutX="1040.0" layoutY="331.0" size="100" />
+      <JFXRadioButton fx:id="paypalRadio1" layoutX="994.0" layoutY="286.0" text=" ">
+         <toggleGroup>
+            <ToggleGroup fx:id="payMethod1" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <Label layoutX="720.0" layoutY="389.0" prefHeight="21.0" prefWidth="422.0" text="Step 2 : Plesase Insert the Card or continue with it cash..">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

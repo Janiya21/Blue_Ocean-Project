@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="roomRoot" prefHeight="616.0" prefWidth="1236.0" style="-fx-background-color: linear-gradient(to left,#b3d9ff,#ffcce0);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Reception_BookingRoomsController">
+   <children>
+      <VBox layoutX="988.0" layoutY="49.0" prefHeight="233.0" prefWidth="194.0" style="-fx-background-color: #004dtransparent99;">
+         <children>
+            <Label prefHeight="30.0" prefWidth="241.0" text="          Rooms Availability" textFill="#165072">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="194.0" prefWidth="194.0" style="-fx-background-color: transparent;">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <ProgressIndicator opacity="0.79" prefHeight="158.0" prefWidth="149.0" progress="0.18">
+                     <HBox.margin>
+                        <Insets top="15.0" />
+                     </HBox.margin>
+                  </ProgressIndicator>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <JFXButton fx:id="savedRoomBtn" layoutX="981.0" layoutY="445.0" onAction="#goFromRoom" prefHeight="49.0" prefWidth="214.0" styleClass="btn" text="Save this room for guest">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton disable="true" layoutX="463.0" layoutY="33.0" prefHeight="91.0" prefWidth="112.0" text=" " />
+      <JFXButton disable="true" layoutX="719.0" layoutY="33.0" prefHeight="91.0" prefWidth="92.0" text=" " />
+      <JFXTextField layoutX="37.0" layoutY="33.0" prefHeight="31.0" prefWidth="914.0" promptText="Seacrch Room here" />
+      <TableView fx:id="customerRoomDetails" layoutX="37.0" layoutY="91.0" opacity="0.91" prefHeight="494.0" prefWidth="914.0">
+        <columns>
+          <TableColumn fx:id="roomID" prefWidth="150.0" text="Room No" />
+            <TableColumn fx:id="bedType" prefWidth="193.0" text="Bed Type" />
+            <TableColumn fx:id="facilities" prefWidth="224.0" text="Facilities" />
+            <TableColumn fx:id="price" prefWidth="206.0" text="Price" />
+            <TableColumn fx:id="availability" prefWidth="140.0" text="Availability" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="goToLogin" layoutX="981.0" layoutY="519.0" onAction="#backFromRoom" prefHeight="49.0" prefWidth="214.0" styleClass="btn2" text="Back">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXTextField fx:id="pickRoomTxt" layoutX="981.0" layoutY="301.0" prefHeight="31.0" prefWidth="214.0" promptText="room no : " />
+      <JFXButton layoutX="978.0" layoutY="374.0" onAction="#btnMaintain" prefHeight="49.0" prefWidth="214.0" style="-fx-background-color: #000099;" styleClass="btn" text="Mark Room as Maintain">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+   </children>
+   <stylesheets>
+      <URL value="@../styles/Admin_bedOperationStyles.css" />
+      <URL value="@../styles/tableView.css" />
+   </stylesheets>
+</AnchorPane>
